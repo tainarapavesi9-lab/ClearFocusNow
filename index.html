@@ -177,7 +177,6 @@
 
         .trust-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 25px; }
         .trust-box { background: #fff; padding: 30px 15px; border-radius: 12px; border: 1px solid #f1f5f9; text-align: center; box-shadow: var(--shadow-soft); transition: 0.3s; }
-        .trust-box:hover { transform: translateY(-5px); border-color: var(--brand-primary); }
         .trust-box img { height: 70px; margin: 0 auto 15px; object-fit: contain; }
         .trust-box strong { font-size: 1rem; display: block; margin-bottom: 5px; color: var(--brand-dark); }
         .trust-box p { font-size: 0.8rem; color: var(--text-light); }
@@ -207,6 +206,9 @@
         .modal-body { background: #fff; border-radius: 20px; max-width: 650px; width: 100%; max-height: 85vh; overflow-y: auto; padding: 40px; position: relative; }
         .modal-close-btn { position: absolute; top: 20px; right: 20px; font-size: 2.5rem; color: #ccc; cursor: pointer; line-height: 0.5; }
 
+        /* Ajuste da foto de ingredientes para Desktop */
+        .ing-main-img { max-width: 100%; width: 100%; margin: 0 auto 40px; border-radius: 20px; }
+
         @media(min-width: 768px) {
             .h1 { font-size: 3rem; text-align: left; }
             .h2 { font-size: 2.2rem; }
@@ -218,12 +220,12 @@
             .price-new { font-size: 3.5rem; }
             .btn-main { width: auto; padding: 20px 60px; font-size: 1.15rem; }
             .trust-grid { grid-template-columns: repeat(4, 1fr); gap: 20px;}
-            .reviews-scroller-wrapper .review-card {
-                flex: 0 0 380px; 
-            }
+            .reviews-scroller-wrapper .review-card { flex: 0 0 380px; }
             .mechanism-flex { display: flex; flex-direction: row; align-items: center; gap: 60px; }
             .flex-reverse { flex-direction: row-reverse; }
             .final-hero { padding: 80px 30px; }
+            /* Redução do tamanho da imagem de ingredientes no Desktop */
+            .ing-main-img { max-width: 600px; }
         }
     </style>
 </head>
@@ -245,7 +247,8 @@
         <div class="flex-grid">
             <div class="hero-img-container">
                 <a href="https://mwebora.com/12298/319/3/?">
-                    <img src="images/imgi_44_HERO-3.png" alt="[Imagem do Produto HoneyCept]" class="hero-img">
+                    <!-- Foto da primeira sessão atualizada -->
+                    <img src="images/imgi_44_HERO-3.png" alt="" class="hero-img">
                 </a>
             </div>
             <div style="flex: 1;">
@@ -259,7 +262,8 @@
                     <div class="price-flex">
                         <span class="price-old">$197</span>
                         <span class="price-new">$49</span>
-                        <span class="save-badge">SAVE 75%</span>
+                        <!-- Desconto atualizado para 73% -->
+                        <span class="save-badge">SAVE 73%</span>
                     </div>
                     <span class="per-bottle">Only $49 per bottle + FREE US Shipping!</span>
                     <a href="https://mwebora.com/12298/319/3/?" class="btn-main">
@@ -276,7 +280,7 @@
 <section class="section bg-gray" style="padding: 25px 0;">
     <div class="container text-center">
         <p style="font-size: 0.65rem; font-weight: 800; text-transform: uppercase; color: var(--brand-dark); margin-bottom: 15px; letter-spacing: 1px;">Referenced in Modern Nootropic Publications</p>
-        <img src="images/scientific-logos.png" alt="[Imagem de Referências Científicas]" style="max-width: 800px; width: 100%; margin: 0 auto; opacity: 0.9;">
+        <img src="images/scientific-logos.png" alt="" style="max-width: 800px; width: 100%; margin: 0 auto; opacity: 0.9;">
     </div>
 </section>
 
@@ -338,7 +342,8 @@
     <div class="container">
         <div class="flex-grid">
             <div class="mechanism-box">
-                <img src="images/doc-1.webp" alt="[Imagem de Pesquisa Cognitiva]" class="mechanism-img">
+                <!-- Foto atualizada para doc-1.webp -->
+                <img src="images/doc-1.webp" alt="" class="mechanism-img">
             </div>
             <div style="flex: 1;">
                 <span class="attention">Must Read:</span>
@@ -374,7 +379,7 @@
     <div class="container">
         <div class="mechanism-flex">
             <div style="flex: 1; text-align: center;" class="mechanism-box">
-                <img src="images/honeycept.png" alt="[Imagem do Ritual Diário HoneyCept]" class="mechanism-img">
+                <img src="images/honeycept.png" alt="" class="mechanism-img">
             </div>
             <div style="flex: 1;">
                 <span class="attention">Daily Protocol:</span>
@@ -398,12 +403,12 @@
     </div>
 </section>
 
-<!-- Session 10: Ingredients Section (Convertido para Lista Numerada) -->
+<!-- Session 10: Ingredients Section (Lista Numerada e Foto Ajustada) -->
 <section class="section bg-white">
     <div class="container text-center">
         <h2 class="h2">The Key Ingredients Behind the Formula</h2>
         
-        <img src="images/honey-ingred.png" alt="[Imagem dos Ingredientes HoneyCept]" style="max-width: 900px; width: 100%; margin: 0 auto 40px; border-radius: 20px;">
+        <img src="images/honey-ingred.png" alt="" class="ing-main-img">
 
         <div style="max-width: 650px; margin: 30px auto; text-align: left;">
             <div class="step"><div class="step-num">1</div><div class="body-text"><strong>Bacopa monnieri:</strong> Ancient botanical known for supporting rapid information recall and focus.</div></div>
@@ -423,10 +428,11 @@
 <section class="section" style="background-color: #FFF9E5; border-top: 2px solid #FFCB00; border-bottom: 2px solid #FFCB00;">
     <div class="container text-center">
         <div class="flex-grid" style="justify-content: center;">
-            <img src="images/guarantee-badge.png" alt="[Imagem do Selo de Garantia]" style="width: 140px;">
+            <img src="images/guarantee-badge.png" alt="" style="width: 140px;">
             <div>
                 <h3 class="h2">60-Day Money Back Guarantee</h3>
-                <p class="body-text" style="font-size: 1.1rem; max-width: 700px; margin: 0 auto;">We believe in HoneyCept so much that we offer an unconditional **100% Satisfaction Guarantee**. If you don't feel sharper, clearer, and more focused within 60 days, we'll refund your entire purchase—no questions asked.</p>
+                <!-- Removidos asteriscos de formatação -->
+                <p class="body-text" style="font-size: 1.1rem; max-width: 700px; margin: 0 auto;">We believe in HoneyCept so much that we offer an unconditional 100% Satisfaction Guarantee. If you don't feel sharper, clearer, and more focused within 60 days, we'll refund your entire purchase—no questions asked.</p>
                 <div style="margin-top: 30px;">
                     <a href="https://mwebora.com/12298/319/3/?" class="btn-main">VIEW CURRENT OFFER →</a>
                 </div>
@@ -440,7 +446,7 @@
     <div class="container">
         <h2 class="h2">Official Product Formulation</h2>
         <div style="max-width: 800px; margin: 0 auto;">
-            <img src="https://lp.institutoexperience.com.br/wp-content/uploads/2026/01/HoneyCept-USA.webp" alt="[Imagem da Tabela Nutricional]" style="width: 100%; border-radius: 12px; box-shadow: var(--shadow-soft);">
+            <img src="https://lp.institutoexperience.com.br/wp-content/uploads/2026/01/HoneyCept-USA.webp" alt="" style="width: 100%; border-radius: 12px; box-shadow: var(--shadow-soft);">
         </div>
     </div>
 </section>
@@ -467,7 +473,8 @@
         <p style="color: #cbd5e1; font-size: 1.15rem; margin-bottom: 45px;">Special discounted pricing available only through this link.</p>
         
         <div style="max-width: 320px; margin: 0 auto;">
-            <img src="images/imgi_27_3-frascos-7-768x768.png" alt="[Imagem da Oferta HoneyCept]" class="bundle-img-final">
+            <!-- Foto da oferta final atualizada -->
+            <img src="images/imgi_27_3-frascos-7-768x768.png" alt="" class="bundle-img-final">
         </div>
         
         <div class="final-price-wrap">
@@ -548,10 +555,11 @@
     document.addEventListener("DOMContentLoaded", () => {
         const wrapper = document.getElementById('reviewsWrapper');
         const cards = Array.from(wrapper.children);
+        if(!wrapper || cards.length === 0) return;
+        
         const cardWidth = cards[0].offsetWidth + 20; 
         const totalWidth = cardWidth * cards.length;
 
-        // Clona os cards para criar o efeito de looping infinito
         cards.forEach(card => {
             const clone = card.cloneNode(true);
             clone.classList.add('scroller-clone');
@@ -566,8 +574,7 @@
 
         function animateScroll() {
             if (!isAnimating) return;
-
-            scrollPos += 0.5; // Velocidade do scroll
+            scrollPos += 0.5; 
             if (scrollPos >= totalWidth) {
                 scrollPos = 0;
             }
