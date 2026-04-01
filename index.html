@@ -24,7 +24,7 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
 
     <!-- PRELOAD HERO IMAGE -->
-    <link rel="preload" as="image" href="images/HERO-3.webp">
+    <link rel="preload" as="image" href="images/44_HERO-3.png">
 
     <!-- OPEN GRAPH -->
     <meta property="og:type" content="product">
@@ -203,7 +203,7 @@
         .trust-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 40px; }
         @media (min-width: 768px) { .trust-grid { grid-template-columns: repeat(4, 1fr); } }
         .trust-item { background: var(--white); padding: 24px; border-radius: 16px; border: 1px solid #f1f5f9; text-align: center; transition: var(--transition); }
-        .trust-item img { height: 50px; margin: 0 auto 16px; object-fit: contain; }
+        .trust-item img { height: 75px; margin: 0 auto 16px; object-fit: contain; }
         .trust-item strong { display: block; font-size: 0.95rem; margin-bottom: 4px; }
 
         /* Review Grid */
@@ -279,21 +279,22 @@
                         </div>
                     </div>
                     <div class="media">
-                        <img src="images/HERO-3.webp" alt="[Imagem do Produto HoneyCept]" style="border-radius: 24px;">
+                        <img src="images/44_HERO-3.png" alt="[Imagem do Produto HoneyCept]" style="border-radius: 24px;">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section 2: Social Proof Logos -->
+        <!-- Section 2: Social Proof Logos (Atualizado) -->
         <section class="bg-light" style="padding: 40px 0;">
             <div class="container text-center">
                 <p style="font-size: 0.7rem; font-weight: 800; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 20px; text-transform: uppercase;">As Seen In Leading Health Publications</p>
-                <img src="images/refs-1024x194.webp" alt="Media References" style="max-width: 800px; margin: 0 auto; opacity: 0.7;">
+                <!-- Novo Logo Científico -->
+                <img src="images/scientific-logos.jpg" alt="Scientific Media Logos" style="max-width: 800px; margin: 0 auto; opacity: 0.9;">
             </div>
         </section>
 
-        <!-- Section 3: The Ritual (A pedido do usuário) -->
+        <!-- Section 3: The Ritual -->
         <section>
             <div class="container">
                 <div class="flex-grid">
@@ -311,7 +312,7 @@
             </div>
         </section>
 
-        <!-- Section 4: Science/Why It Works -->
+        <!-- Section 4: Science/Why It Works (Selo Atualizados) -->
         <section class="bg-light">
             <div class="container">
                 <div class="flex-grid reverse">
@@ -323,23 +324,22 @@
                         <h2 class="h2">Nourish Your Focus, Don't Force It.</h2>
                         <p>Cheap stimulants hijack your nervous system and cause a "brain crash" at 3 PM. HoneyCept is different. We focus on neuro-nutrition to support your body's natural cognitive maintenance.</p>
                         <div class="trust-grid" style="margin-top: 32px;">
-                            <div class="trust-item"><img src="images/usa-1.png" alt="Made in USA"><strong>USA Made</strong></div>
-                            <div class="trust-item"><img src="images/fda-1.png" alt="FDA Facility"><strong>Certified</strong></div>
-                            <div class="trust-item"><img src="images/gmp-1.png" alt="GMP Standard"><strong>GMP Quality</strong></div>
-                            <div class="trust-item"><img src="images/nat-1.png" alt="Natural Formula"><strong>100% Natural</strong></div>
+                            <div class="trust-item"><img src="images/badge-usa.png" alt="USA Ingredients"><strong>USA Ingredients</strong></div>
+                            <div class="trust-item"><img src="images/badge-fda.png" alt="FDA Registered"><strong>FDA Registered</strong></div>
+                            <div class="trust-item"><img src="images/badge-gmp.png" alt="GMP Certified"><strong>GMP Certified</strong></div>
+                            <div class="trust-item"><img src="images/badge-natural.png" alt="100% Natural"><strong>100% Natural</strong></div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section 5: Ingredients (Imagem solicitada no topo) -->
+        <!-- Section 5: Ingredients -->
         <section>
             <div class="container text-center">
                 <span class="eyebrow">Inside the Formula</span>
                 <h2 class="h2">Standardized Botanical Extracts</h2>
                 
-                <!-- Imagem solicitada na sessão de ingredientes -->
                 <img src="images/honey-ingred.png" alt="[Imagem Detalhada dos Ingredientes]" class="ing-main-img">
 
                 <div class="ing-grid">
@@ -386,9 +386,12 @@
             </div>
         </section>
 
-        <!-- Section 7: Final Offer -->
+        <!-- Section 7: Final Offer (Selo de Garantia Adicionado) -->
         <section id="offer" class="container">
             <div class="cta-section">
+                <!-- Selo de Garantia Premium -->
+                <img src="images/guarantee-badge.png" alt="100% Satisfaction Guarantee" style="width: 140px; margin: 0 auto 20px; display: block;">
+                
                 <span class="eyebrow" style="color: var(--primary);">Limited Time Availability</span>
                 <h2 class="h2">Secure Your Mental Clarity Today</h2>
                 <p style="margin-bottom: 3rem; opacity: 0.9; max-width: 700px; margin-inline: auto;">Choose the 6-bottle bundle for the best value and to ensure you don't run out of your new daily ritual.</p>
@@ -450,7 +453,6 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="28"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
     </a>
 
-    <!-- Modals -->
     <div id="modal-privacy" class="modal" onclick="if(event.target===this)closeModal('privacy')">
         <div class="modal-content">
             <span class="modal-close" onclick="closeModal('privacy')">&times;</span>
