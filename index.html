@@ -89,9 +89,6 @@
             --text-main:     #000B2E;
             --text-body:     #1E293B;
             --text-light:    #64748B;
-            --bg-white:      #ffffff;
-            --bg-gray:       #f8fafc;
-            --bg-highlight:  #F3E5D8;
             --white:         #ffffff;
             --star-gold:     #FFB800;
             --shadow-soft:   0 10px 30px rgba(0,0,0,0.05);
@@ -120,6 +117,16 @@
         .bg-gray { background-color: var(--bg-gray); }
         .bg-white { background-color: var(--white); }
         .bg-marrom { background-color: var(--bg-highlight); }
+        
+        /* Secção de transformação com fundo Marrom Escuro */
+        .bg-transformation-highlight { 
+            background-color: #3b281b; 
+            border-top: 4px solid var(--brand-primary); 
+            border-bottom: 4px solid var(--brand-primary);
+            padding: 80px 0;
+        }
+        .bg-transformation-highlight .h2 { color: #ffffff; }
+        .bg-transformation-highlight .body-text { color: #f1f5f9; }
 
         .top-bar { background: var(--brand-dark); color: #fff; padding: 12px; text-align: center; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; }
         .site-header { background: var(--brand-header); padding: 15px 0; border-bottom: 1px solid rgba(0,0,0,0.05); text-align: center; }
@@ -260,24 +267,24 @@
         </div>
     </section>
 
-    <!-- Section: Transformation -->
-    <section class="section bg-white">
+    <!-- Section: Transformation (DESTAQUE MARROM ESCURO) -->
+    <section class="section bg-transformation-highlight">
         <div class="container text-center">
             <h2 class="h2">Exactly What To Expect: <strong>The HoneyCept Transformation</strong></h2>
             <p class="body-text" style="max-width: 800px; margin: 0 auto 40px;">When you start your <strong>3-second ritual</strong>, you aren't just taking a supplement. You are triggering a <strong>staged cognitive reset</strong>.</p>
             
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; text-align: left;">
-                <article style="background: var(--bg-gray); padding: 30px; border-radius: 15px; border-left: 5px solid var(--brand-primary);">
+                <article style="background: #fff; padding: 30px; border-radius: 15px; border-left: 5px solid var(--brand-primary); box-shadow: 0 10px 25px rgba(0,0,0,0.2);">
                     <strong style="display: block; font-size: 1.2rem; margin-bottom: 10px; color: var(--brand-dark);">Day 1-7: The "Clear Sky" Effect</strong>
-                    <p>Nutrients start balancing your <strong>acetylcholine levels</strong>. Most users report a <strong>"lifting of the heavy cloud"</strong> that usually hits in the afternoon. You start feeling <strong>more present</strong> in conversations.</p>
+                    <p style="color: var(--text-body);">Nutrients start balancing your <strong>acetylcholine levels</strong>. Most users report a <strong>"lifting of the heavy cloud"</strong> that usually hits in the afternoon. You start feeling <strong>more present</strong> in conversations.</p>
                 </article>
-                <article style="background: var(--bg-gray); padding: 30px; border-radius: 15px; border-left: 5px solid var(--brand-primary);">
+                <article style="background: #fff; padding: 30px; border-radius: 15px; border-left: 5px solid var(--brand-primary); box-shadow: 0 10px 25px rgba(0,0,0,0.2);">
                     <strong style="display: block; font-size: 1.2rem; margin-bottom: 10px; color: var(--brand-dark);">Day 15: Rapid Recall kicks in</strong>
-                    <p>Names that used to be on the tip of your tongue now <strong>flow effortlessly</strong>. Your <strong>mental stamina</strong> increases, allowing you to handle complex tasks without feeling <strong>burned out</strong> by noon.</p>
+                    <p style="color: var(--text-body);">Names that used to be on the tip of your tongue now <strong>flow effortlessly</strong>. Your <strong>mental stamina</strong> increases, allowing you to handle complex tasks without feeling <strong>burned out</strong> by noon.</p>
                 </article>
-                <article style="background: var(--bg-gray); padding: 30px; border-radius: 15px; border-left: 5px solid var(--brand-primary);">
+                <article style="background: #fff; padding: 30px; border-radius: 15px; border-left: 5px solid var(--brand-primary); box-shadow: 0 10px 25px rgba(0,0,0,0.2);">
                     <strong style="display: block; font-size: 1.2rem; margin-bottom: 10px; color: var(--brand-dark);">Day 30+: Full Cognitive Resilience</strong>
-                    <p>The <strong>"brain fog" is gone</strong>. You feel a sense of <strong>quiet confidence</strong> and <strong>total control</strong> over your thoughts. You are <strong>mentally sharp</strong>, resilient to stress, and ready to <strong>enjoy life</strong> to the fullest.</p>
+                    <p style="color: var(--text-body);">The <strong>"brain fog" is gone</strong>. You feel a sense of <strong>quiet confidence</strong> and <strong>total control</strong> over your thoughts. You are <strong>mentally sharp</strong>, resilient to stress, and ready to <strong>enjoy life</strong> to the fullest.</p>
                 </article>
             </div>
         </div>
