@@ -76,7 +76,7 @@
     <!-- Performance & Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@400;700;800;900&display=swap" rel="stylesheet">
 
-    <!-- Affiliate Code Integration -->
+    <!-- Affiliate Tracking Script -->
     <script src="https://cod.raadsoficial.com/code/8300-57ba6682-9af6-4fd8-88ee-fb48a3b4e44b"></script>
 
     <style>
@@ -91,11 +91,11 @@
             --text-light:    #64748B;
             --bg-white:      #ffffff;
             --bg-gray:       #f8fafc;
-            --bg-highlight:  #F3E5D8; /* Fundo marromzinho solicitado */
+            --bg-highlight:  #F3E5D8;
             --white:         #ffffff;
             --star-gold:     #FFB800;
             --shadow-soft:   0 10px 30px rgba(0,0,0,0.05);
-            --footer-bg:     #AD801C; /* Cor do rodapé solicitada */
+            --footer-bg:     #AD801C;
         }
 
         *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -137,9 +137,8 @@
         .btn-main:hover { background: var(--cta-hover); transform: translateY(-2px); }
         .btn-accent { display: inline-flex; align-items: center; justify-content: center; background: var(--brand-primary); color: #000; font-weight: 800; font-size: 0.9rem; padding: 14px 28px; border-radius: 10px; border-bottom: 3px solid rgba(0,0,0,0.1); }
 
-        /* Scroller */
         .reviews-scroller-container { overflow: hidden; position: relative; width: 100%; padding-bottom: 20px; }
-        .reviews-scroller-wrapper { display: flex; gap: 20px; width: fit-content; }
+        .reviews-scroller-wrapper { display: flex; gap: 20px; width: fit-content; transition: transform 0.1s linear; }
         .scroller-clone { visibility: hidden; }
         .review-card { flex: 0 0 320px; background: #fff; border: 1px solid #f1f5f9; border-radius: 12px; padding: 30px 20px; text-align: center; box-shadow: var(--shadow-soft); }
 
@@ -172,7 +171,7 @@
 
         .faq-container { max-width: 800px; margin: 0 auto; }
         .faq-item { border-bottom: 1px solid #e5e7eb; }
-        .faq-q { width: 100%; padding: 18px 0; text-align: left; font-weight: 700; font-size: 0.95rem; color: var(--text-main); display: flex; justify-content: space-between; align-items: center; }
+        .faq-q { width: 100%; padding: 18px 0; text-align: left; font-weight: 700; font-size: 0.95rem; color: var(--text-main); display: flex; justify-content: space-between; align-items: center; border: none; background: none; }
         .faq-a { display: none; padding-bottom: 18px; color: var(--text-body); line-height: 1.6; font-size: 0.9rem; }
 
         .footer { background: var(--footer-bg); color: #fff; padding: 60px 20px; text-align: center; font-size: 0.75rem; }
@@ -186,7 +185,6 @@
         .modal-body { background: #fff; border-radius: 20px; max-width: 650px; width: 100%; max-height: 85vh; overflow-y: auto; padding: 40px; position: relative; }
         .modal-close-btn { position: absolute; top: 20px; right: 20px; font-size: 2.5rem; color: #ccc; cursor: pointer; line-height: 0.5; }
 
-        /* Imagem de ingredientes ajustada para Desktop */
         .ing-main-img { max-width: 100%; width: 100%; margin: 0 auto 40px; border-radius: 12px; }
 
         @media(min-width: 768px) {
@@ -204,7 +202,6 @@
             .mechanism-flex { display: flex; flex-direction: row; align-items: center; gap: 60px; }
             .flex-reverse { flex-direction: row-reverse; }
             .final-hero { padding: 80px 30px; }
-            /* Redução do tamanho no Desktop conforme solicitado */
             .ing-main-img { max-width: 600px; }
         }
 
@@ -213,295 +210,282 @@
 </head>
 <body>
 
-<!-- 1. Offer Bar Atualizado -->
+<!-- 1. Top Offer Bar -->
 <div class="top-bar">60-DAY MONEY BACK GUARANTEE | SAVE $780 TODAY</div>
 
-<!-- 2. Professional Header -->
+<!-- 2. Header -->
 <header class="site-header">
     <div class="container">
         <div class="logo">Honey<span>Cept</span></div>
     </div>
 </header>
 
-<!-- 3. Hero Session -->
-<section class="section bg-white" style="padding-top: 40px;">
-    <div class="container">
-        <div class="flex-grid">
-            <div class="hero-img-container">
-                <a href="https://mwebora.com/12298/319/3/?">
-                    <img src="images/imgi_44_HERO-3.png" alt="HoneyCept Advanced Formula" class="hero-img">
-                </a>
-            </div>
-            <div style="flex: 1;">
-                <span class="eyebrow">Advanced Cognitive Research</span>
-                <h1 class="h1">Stop The Embarrassing <span class="highlight">"Senior Moments"</span> & Wake Up Your Brain</h1>
-                <div style="margin-top: 25px;">
-                    <p class="body-text">If you’ve been feeling like your mind is "checking out" early, you aren’t alone. Thousands of Americans over 50 are using this simple 3-second ritual to kill brain fog and reclaim the mental edge they thought was gone forever.</p>
-                    <p class="body-text" style="margin-top: 15px;">HoneyCept isn't a stimulant—it’s a meticulously developed neuro-nutrition protocol designed to help you stay sharp, present, and in control.</p>
-                </div>
-                <div class="offer-card">
-                    <div class="price-flex">
-                        <span class="price-old">$197</span>
-                        <span class="price-new">$49</span>
-                        <span class="save-badge">SAVE 73%</span>
-                    </div>
-                    <span class="per-bottle">Only $49 per bottle + FREE US Shipping!</span>
-                    <a href="https://mwebora.com/12298/319/3/?" class="btn-main">
-                        ACTIVATE MY DISCOUNT NOW
-                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14m-7-7l7 7-7 7"/></svg>
+<main>
+    <!-- 3. Hero Section -->
+    <section class="section bg-white" style="padding-top: 40px;">
+        <div class="container">
+            <div class="flex-grid">
+                <div class="hero-img-container">
+                    <a href="https://mwebora.com/12298/319/3/?">
+                        <img src="images/imgi_44_HERO-3.png" alt="[Imagem do Produto HoneyCept]" class="hero-img">
                     </a>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 4. Scientific Section -->
-<section class="section bg-gray" style="padding: 25px 0;">
-    <div class="container text-center">
-        <p style="font-size: 0.65rem; font-weight: 800; text-transform: uppercase; color: var(--brand-dark); margin-bottom: 15px; letter-spacing: 1px;">Referenced in Modern Nootropic Publications</p>
-        <img src="images/scientific-logos.png" alt="Featured in Journals" style="max-width: 800px; width: 100%; margin: 0 auto; opacity: 0.9;">
-    </div>
-</section>
-
-<!-- 5. Testimonials Section -->
-<section class="section bg-soft">
-    <div class="container text-center">
-        <span class="badge">Success Stories</span>
-        <div style="margin-bottom: 35px;">
-            <span style="font-size: 2.5rem; font-weight: 900; color: var(--text-main);">4.97</span>
-            <div class="stars">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-            </div>
-            <p style="font-size: 0.8rem; color: var(--brand-dark); font-weight: 600;">Based on 1,850+ Verified Purchases</p>
-        </div>
-
-        <div class="reviews-scroller-container" id="reviewsScroller">
-            <div class="reviews-scroller-wrapper" id="reviewsWrapper">
-                <div class="review-card">
-                    <span class="review-verify">✓ Verified Purchase</span>
-                    <p class="review-text">"As a retired teacher, my memory is my livelihood. I started feeling 'foggy' last year, but within 10 days of HoneyCept, that heavy static just lifted."</p>
-                    <span class="review-author">Linda S. — Sarasota, FL</span>
-                </div>
-                <div class="review-card">
-                    <span class="review-verify">✓ Verified Purchase</span>
-                    <p class="review-text">"I run a small business and can't afford to be slow. I used to rely on 4 cups of coffee. Now, I have sustained clarity all day without the jitters."</p>
-                    <span class="review-author">David W. — Phoenix, AZ</span>
-                </div>
-                <div class="review-card">
-                    <span class="review-verify">✓ Verified Purchase</span>
-                    <p class="review-text">"Being 68 doesn't mean I have to be forgetful. HoneyCept is my morning secret. No more walking into rooms and forgetting why I'm there."</p>
-                    <span class="review-author">Robert K. — Columbus, OH</span>
-                </div>
-                <div class="review-card">
-                    <span class="review-verify">✓ Verified Purchase</span>
-                    <p class="review-text">"I was skeptical but the 60-day guarantee made it easy. My focus at work is night and day compared to last month. Worth every penny."</p>
-                    <span class="review-author">Sarah M. — Austin, TX</span>
-                </div>
-                <div class="review-card">
-                    <span class="review-verify">✓ Verified Purchase</span>
-                    <p class="review-text">"The brain fog was real. HoneyCept helped clear the 'static' in my head. I'm on my 4th bottle now and feeling great."</p>
-                    <span class="review-author">James P. — Denver, CO</span>
-                </div>
-                <div class="review-card">
-                    <span class="review-verify">✓ Verified Purchase</span>
-                    <p class="review-text">"Finally, a supplement that doesn't make me feel shaky. Just clean mental energy. Highly recommend to anyone over 50."</p>
-                    <span class="review-author">Mary R. — Portland, OR</span>
+                <div style="flex: 1;">
+                    <span class="eyebrow">Advanced Cognitive Research</span>
+                    <h1 class="h1">Stop The Embarrassing <span class="highlight">"Senior Moments"</span> & Wake Up Your Brain</h1>
+                    <div style="margin-top: 25px;">
+                        <p class="body-text">If you’ve been feeling like your mind is "checking out" early, you aren’t alone. Thousands of Americans over 50 are using this simple 3-second ritual to kill brain fog and reclaim the mental edge they thought was gone forever.</p>
+                        <p class="body-text" style="margin-top: 15px;">HoneyCept isn't a stimulant—it’s a meticulously developed neuro-nutrition protocol designed to help you stay sharp, present, and in control.</p>
+                    </div>
+                    <div class="offer-card">
+                        <div class="price-flex">
+                            <span class="price-old">$197</span>
+                            <span class="price-new">$49</span>
+                            <span class="save-badge">SAVE 73%</span>
+                        </div>
+                        <span class="per-bottle">Only $49 per bottle + FREE US Shipping!</span>
+                        <a href="https://mwebora.com/12298/319/3/?" class="btn-main">
+                            ACTIVATE MY DISCOUNT NOW
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 12h14m-7-7l7 7-7 7"/></svg>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Session 6: Know Before Session -->
-<section class="section bg-white">
-    <div class="container">
-        <div class="flex-grid">
-            <div class="mechanism-box">
-                <img src="images/doc-1.webp" alt="Neuro-Nutrition Expert" class="mechanism-img">
-            </div>
-            <div style="flex: 1;">
-                <span class="attention">Must Read:</span>
-                <h2 class="h2">Is Your Mind "Checking Out" Before You Are?</h2>
-                <div class="body-text">
-                    <p>It starts small. Forgetting where you left the keys. Struggling to remember a name. That "afternoon slump" where your brain just feels like static.</p>
-                    <p style="margin-top: 15px;">Most common solutions rely on <strong>cheap synthetic stimulants</strong> that cause a crash. HoneyCept provides deep neuro-nutrition to support long-term cognitive health.</p>
+    <!-- 4. Scientific Proof Section -->
+    <section class="section bg-gray" style="padding: 25px 0;">
+        <div class="container text-center">
+            <p style="font-size: 0.65rem; font-weight: 800; text-transform: uppercase; color: var(--brand-dark); margin-bottom: 15px; letter-spacing: 1px;">Referenced in Modern Nootropic Publications</p>
+            <img src="images/scientific-logos.png" alt="[Imagem de Referências Científicas]" style="max-width: 800px; width: 100%; margin: 0 auto; opacity: 0.9;">
+        </div>
+    </section>
+
+    <!-- 5. Testimonials (Carousel) -->
+    <section class="section bg-soft">
+        <div class="container text-center">
+            <span class="badge">Success Stories</span>
+            <div style="margin-bottom: 35px;">
+                <span style="font-size: 2.5rem; font-weight: 900; color: var(--text-main);">4.97</span>
+                <div class="stars" aria-label="4.97 out of 5 stars">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
                 </div>
-                <div style="margin-top: 30px;">
-                    <a href="https://mwebora.com/12298/319/3/?" class="btn-accent">CHECK HOW IT WORKS →</a>
-                </div>
+                <p style="font-size: 0.8rem; color: var(--brand-dark); font-weight: 600;">Based on 1,850+ Verified Purchases</p>
             </div>
-        </div>
-    </div>
-</section>
 
-<!-- Session 7: Quality Standards -->
-<section class="section bg-gray">
-    <div class="container text-center">
-        <h2 class="h2">Built Under Strict Quality & Safety Standards</h2>
-        <p class="body-text" style="max-width: 800px; margin: 0 auto 35px;">Produced in the United States in facilities that follow <strong>Good Manufacturing Practices (GMP)</strong> to help ensure purity, safety, and reliability.</p>
-        <div class="trust-grid">
-            <div class="trust-box"><img src="images/badge-usa.png" alt="Made in USA"><strong>Made in USA</strong><p>Local & Global Ingredients</p></div>
-            <div class="trust-box"><img src="images/badge-fda.png" alt="FDA Registered"><strong>FDA Registered</strong><p>Certified Facility</p></div>
-            <div class="trust-box"><img src="images/badge-gmp.png" alt="GMP Certified"><strong>GMP Certified</strong><p>Strict Quality Control</p></div>
-            <div class="trust-box"><img src="images/badge-natural.png" alt="100% Natural"><strong>100% Natural</strong><p>High Quality Formula</p></div>
-        </div>
-    </div>
-</section>
-
-<!-- Session 8: Simple Habit Session -->
-<section class="section bg-white">
-    <div class="container">
-        <div class="mechanism-flex">
-            <div style="flex: 1; text-align: center;" class="mechanism-box">
-                <img src="images/honeycept.png" alt="The HoneyCept Ritual" class="mechanism-img">
-            </div>
-            <div style="flex: 1;">
-                <span class="attention">Daily Protocol:</span>
-                <h2 class="h2">The 3-Second Ritual For Mental Clarity</h2>
-                <div class="body-text">
-                   <p>Simply take the recommended dosage with water once daily, preferably in the morning. This consistency allows the botanical extracts to support your cognitive pathways throughout the day.</p>
-                   <p style="margin-top: 15px;">Within the first week, users report a "lifting of the fog," leading to better focus and resilience during mental stress.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Session 9: Supporting vs Forcing (MARROMZINHO) -->
-<section class="section text-center bg-marrom">
-    <div class="container">
-        <h2 class="h2">Wait, Don't "Force" Your Focus—Nourish It.</h2>
-        <div class="body-text" style="max-width: 850px; margin: 0 auto; color: var(--text-main); font-weight: 500;">
-            <p>HoneyCept is designed to feed your brain the vital nutrients it needs to perform at its peak. By providing standardized extracts found in nature, we support the body’s own ritual of neural maintenance and growth—WITHOUT the crash.</p>
-        </div>
-    </div>
-</section>
-
-<!-- Session 10: Ingredients Section -->
-<section class="section bg-white">
-    <div class="container text-center">
-        <h2 class="h2">The Key Ingredients Behind the Formula</h2>
-        
-        <!-- Foto centralizada e ajustada para desktop -->
-        <img src="images/honey-ingred.png" alt="HoneyCept Main Ingredients" class="ing-main-img">
-
-        <!-- Lista numerada uniforme solicitada -->
-        <div style="max-width: 650px; margin: 0 auto; text-align: left;">
-            <div class="step"><div class="step-num">1</div><div class="body-text"><strong>Bacopa monnieri:</strong> Ancient botanical known for supporting rapid information recall and focus.</div></div>
-            <div class="step"><div class="step-num">2</div><div class="body-text"><strong>Vitamin B12:</strong> Essential for nerve health and maintaining consistent daily energy levels.</div></div>
-            <div class="step"><div class="step-num">3</div><div class="body-text"><strong>Huperzine-A:</strong> Supports the "learning molecule" (acetylcholine) in the brain.</div></div>
-            <div class="step"><div class="step-num">4</div><div class="body-text"><strong>Acetylcholine Support:</strong> Synergistic blend to support mental clarity and long-term memory retrieval.</div></div>
-            <div class="step"><div class="step-num">5</div><div class="body-text"><strong>Neuro-Protection:</strong> Botanical extracts that help protect neurons from oxidative stress.</div></div>
-            <div class="step"><div class="step-num">6</div><div class="body-text"><strong>Sustained Energy:</strong> Jitter-free mental energy for everyday high-performance living.</div></div>
-        </div>
-        
-        <div style="margin-top: 40px;">
-            <a href="https://mwebora.com/12298/319/3/?" class="btn-accent">SEE FULL PRODUCT DETAILS</a>
-        </div>
-    </div>
-</section>
-
-<!-- Session 11: Guarantee Section -->
-<section class="section" style="background-color: #FFF9E5; border-top: 2px solid #FFCB00; border-bottom: 2px solid #FFCB00;">
-    <div class="container text-center">
-        <div class="flex-grid" style="justify-content: center;">
-            <img src="images/guarantee-badge.png" alt="Satisfaction Guaranteed" style="width: 140px;">
-            <div>
-                <h3 class="h2">60-Day Money Back Guarantee</h3>
-                <p class="body-text" style="font-size: 1.1rem; max-width: 700px; margin: 0 auto;">We believe in HoneyCept so much that we offer an unconditional 100% Satisfaction Guarantee. If you don't feel sharper, clearer, and more focused within 60 days, we'll refund your entire purchase—no questions asked.</p>
-                <div style="margin-top: 30px;">
-                    <a href="https://mwebora.com/12298/319/3/?" class="btn-main">VIEW CURRENT OFFER →</a>
+            <div class="reviews-scroller-container" id="reviewsScroller">
+                <div class="reviews-scroller-wrapper" id="reviewsWrapper">
+                    <article class="review-card">
+                        <span class="review-verify">✓ Verified Purchase</span>
+                        <p class="review-text">"As a retired teacher, my memory is my livelihood. I started feeling 'foggy' last year, but within 10 days of HoneyCept, that heavy static just lifted."</p>
+                        <span class="review-author">Linda S. — Sarasota, FL</span>
+                    </article>
+                    <article class="review-card">
+                        <span class="review-verify">✓ Verified Purchase</span>
+                        <p class="review-text">"I run a small business and can't afford to be slow. I used to rely on 4 cups of coffee. Now, I have sustained clarity all day without the jitters."</p>
+                        <span class="review-author">David W. — Phoenix, AZ</span>
+                    </article>
+                    <article class="review-card">
+                        <span class="review-verify">✓ Verified Purchase</span>
+                        <p class="review-text">"Being 68 doesn't mean I have to be forgetful. HoneyCept is my morning secret. No more walking into rooms and forgetting why I'm there."</p>
+                        <span class="review-author">Robert K. — Columbus, OH</span>
+                    </article>
+                    <article class="review-card">
+                        <span class="review-verify">✓ Verified Purchase</span>
+                        <p class="review-text">"I was skeptical but the 60-day guarantee made it easy. My focus at work is night and day compared to last month. Worth every penny."</p>
+                        <span class="review-author">Sarah M. — Austin, TX</span>
+                    </article>
+                    <article class="review-card">
+                        <span class="review-verify">✓ Verified Purchase</span>
+                        <p class="review-text">"The brain fog was real. HoneyCept helped clear the 'static' in my head. I'm on my 4th bottle now and feeling great."</p>
+                        <span class="review-author">James P. — Denver, CO</span>
+                    </article>
+                    <article class="review-card">
+                        <span class="review-verify">✓ Verified Purchase</span>
+                        <p class="review-text">"Finally, a supplement that doesn't make me feel shaky. Just clean mental energy. Highly recommend to anyone over 50."</p>
+                        <span class="review-author">Mary R. — Portland, OR</span>
+                    </article>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Product Label Section -->
-<section class="section bg-white text-center">
-    <div class="container">
-        <h2 class="h2">Official Product Formulation</h2>
-        <div style="max-width: 800px; margin: 0 auto;">
-            <img src="https://lp.institutoexperience.com.br/wp-content/uploads/2026/01/HoneyCept-USA.webp" alt="Supplement Facts" style="width: 100%; border-radius: 12px; box-shadow: var(--shadow-soft);">
+    <!-- 6. Information Section -->
+    <section class="section bg-white">
+        <div class="container">
+            <div class="flex-grid">
+                <div class="mechanism-box">
+                    <img src="images/doc-1.webp" alt="[Imagem de Pesquisa de Saúde]" class="mechanism-img">
+                </div>
+                <div style="flex: 1;">
+                    <span class="attention">Must Read:</span>
+                    <h2 class="h2">Is Your Mind "Checking Out" Before You Are?</h2>
+                    <div class="body-text">
+                        <p>It starts small. Forgetting where you left the keys. Struggling to remember a name. That "afternoon slump" where your brain just feels like static.</p>
+                        <p style="margin-top: 15px;">Most common solutions rely on <strong>cheap synthetic stimulants</strong> that cause a crash. HoneyCept provides deep neuro-nutrition to support long-term cognitive health.</p>
+                    </div>
+                    <div style="margin-top: 30px;">
+                        <a href="https://mwebora.com/12298/319/3/?" class="btn-accent">CHECK HOW IT WORKS →</a>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Session 12: FAQ -->
-<section class="section bg-gray">
-    <div class="container">
-        <h2 class="h2 text-center">Common Questions</h2>
-        <div class="faq-container">
-            <div class="faq-item"><div class="faq-q"><span>What is HoneyCept?</span><span>+</span></div><div class="faq-a">HoneyCept is a daily brain support supplement designed to help improve focus, memory, and mental clarity using natural botanical extracts.</div></div>
-            <div class="faq-item"><div class="faq-q"><span>Is HoneyCept safe?</span><span>+</span></div><div class="faq-a">Yes, it's made with natural ingredients in an FDA-registered and GMP-certified facility.</div></div>
-            <div class="faq-item"><div class="faq-q"><span>Is this a one-time purchase?</span><span>+</span></div><div class="faq-a">Absolutely. No subscriptions, no hidden fees. Just one single payment today.</div></div>
-            <div class="faq-item"><div class="faq-q"><span>When will I see results?</span><span>+</span></div><div class="faq-a">Most users report a difference in clarity within 7-14 days of consistent use.</div></div>
-            <div class="faq-item"><div class="faq-q"><span>How shipping works?</span><span>+</span></div><div class="faq-a">We ship via premium carriers like FedEx or UPS, and orders typically arrive within 5-7 business days in the USA.</div></div>
-            <div class="faq-item"><div class="faq-q"><span>What if I'm not satisfied?</span><span>+</span></div><div class="faq-a">We offer a 60-day, 100% money-back guarantee. If you aren't happy, simply return the bottles for a full refund.</div></div>
+    <!-- 7. Trust Badges -->
+    <section class="section bg-gray">
+        <div class="container text-center">
+            <h2 class="h2">Built Under Strict Quality & Safety Standards</h2>
+            <p class="body-text" style="max-width: 800px; margin: 0 auto 35px;">Produced in the United States in facilities that follow <strong>Good Manufacturing Practices (GMP)</strong> to help ensure purity, safety, and reliability.</p>
+            <div class="trust-grid">
+                <div class="trust-box"><img src="images/badge-usa.png" alt="[Selo USA Ingredients]"><strong>Made in USA</strong><p>Local & Global Ingredients</p></div>
+                <div class="trust-box"><img src="images/badge-fda.png" alt="[Selo FDA Facility]"><strong>FDA Registered</strong><p>Certified Facility</p></div>
+                <div class="trust-box"><img src="images/badge-gmp.png" alt="[Selo GMP Practice]"><strong>GMP Certified</strong><p>Strict Quality Control</p></div>
+                <div class="trust-box"><img src="images/badge-natural.png" alt="[Selo 100% Natural]"><strong>100% Natural</strong><p>High Quality Formula</p></div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Session 13: Final Offer -->
-<section class="final-hero">
-    <div class="container">
-        <h2 class="h2" style="color: #fff; font-size: 2.8rem; margin-bottom: 10px;">Reclaim Your Mental Clarity Today</h2>
-        <p style="color: #cbd5e1; font-size: 1.15rem; margin-bottom: 45px;">Special discounted pricing available only through this link.</p>
-        
-        <div style="max-width: 320px; margin: 0 auto;">
-            <img src="images/imgi_27_3-frascos-7-768x768.png" alt="Final Offer Bundle" class="bundle-img-final">
+    <!-- 8. Habit Section -->
+    <section class="section bg-white">
+        <div class="container">
+            <div class="mechanism-flex">
+                <div style="flex: 1; text-align: center;" class="mechanism-box">
+                    <img src="images/honeycept.png" alt="[Imagem do Ritual Diário]" class="mechanism-img">
+                </div>
+                <div style="flex: 1;">
+                    <span class="attention">Daily Protocol:</span>
+                    <h2 class="h2">The 3-Second Ritual For Mental Clarity</h2>
+                    <div class="body-text">
+                       <p>Simply take the recommended dosage with water once daily, preferably in the morning. This simple consistency allows the botanical extracts to support your cognitive pathways throughout the day.</p>
+                       <p style="margin-top: 15px;">Within the first week, users report a "lifting of the fog," leading to better focus and resilience during mental stress.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-        <div class="final-price-wrap">
-            <span style="font-size: 1.5rem; color: #94a3b8; text-decoration: line-through;">$1074</span>
-            <span style="font-family: 'Merriweather', serif; font-size: 4.5rem; font-weight: 900; color: #fff; line-height: 1;">$294</span>
-        </div>
-        
-        <p style="font-weight: 800; color: #fff; font-size: 1.3rem; margin-bottom: 35px;">Only US$ 49 per bottle + FREE SHIPPING!</p>
-        <p style="color: #FFCB00; font-weight: 700; margin-bottom: 25px;">ONE-TIME PURCHASE · NO SUBSCRIPTIONS · NO RECURRING BILLS</p>
-        
-        <a href="https://mwebora.com/12298/319/3/?" class="btn-white">VERIFY TODAY'S AVAILABILITY</a>
-        
-        <p style="font-size: 0.75rem; color: #94a3b8; margin-top: 35px;">60-day money-back guarantee · Secure payment · One-time purchase</p>
-    </div>
-</section>
+    </section>
 
-<!-- Session 14: Footer Atualizado -->
+    <!-- 9. Nourish Highlighting (Marromzinho) -->
+    <section class="section text-center bg-marrom">
+        <div class="container">
+            <h2 class="h2">Wait, Don't "Force" Your Focus—Nourish It.</h2>
+            <div class="body-text" style="max-width: 850px; margin: 0 auto; color: var(--text-main); font-weight: 500;">
+                <p>HoneyCept is designed to feed your brain the vital nutrients it needs to perform at its peak. By providing standardized extracts found in nature, we support the body’s own ritual of neural maintenance and growth—WITHOUT the crash.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. Ingredients Section -->
+    <section class="section bg-white">
+        <div class="container text-center">
+            <h2 class="h2">The Key Ingredients Behind the Formula</h2>
+            <img src="images/honey-ingred.png" alt="[Imagem de Ingredientes Detalhados]" class="ing-main-img">
+
+            <div style="max-width: 650px; margin: 0 auto; text-align: left;">
+                <div class="step"><div class="step-num">1</div><div class="body-text"><strong>Bacopa monnieri:</strong> Ancient botanical known for supporting rapid information recall and focus.</div></div>
+                <div class="step"><div class="step-num">2</div><div class="body-text"><strong>Vitamin B12:</strong> Essential for nerve health and maintaining consistent daily energy levels.</div></div>
+                <div class="step"><div class="step-num">3</div><div class="body-text"><strong>Huperzine-A:</strong> Supports the "learning molecule" (acetylcholine) in the brain.</div></div>
+                <div class="step"><div class="step-num">4</div><div class="body-text"><strong>Acetylcholine Support:</strong> Synergistic blend to support mental clarity and long-term memory retrieval.</div></div>
+                <div class="step"><div class="step-num">5</div><div class="body-text"><strong>Neuro-Protection:</strong> Botanical extracts that help protect neurons from oxidative stress.</div></div>
+                <div class="step"><div class="step-num">6</div><div class="body-text"><strong>Sustained Energy:</strong> Jitter-free mental energy for everyday high-performance living.</div></div>
+            </div>
+            <div style="margin-top: 40px;">
+                <a href="https://mwebora.com/12298/319/3/?" class="btn-accent">SEE FULL PRODUCT DETAILS</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. Guarantee Section -->
+    <section class="section" style="background-color: #FFF9E5; border-top: 2px solid #FFCB00; border-bottom: 2px solid #FFCB00;">
+        <div class="container text-center">
+            <div class="flex-grid" style="justify-content: center;">
+                <img src="images/guarantee-badge.png" alt="[Selo de Garantia 100%]" style="width: 140px;">
+                <div>
+                    <h3 class="h2">60-Day Money Back Guarantee</h3>
+                    <p class="body-text" style="font-size: 1.1rem; max-width: 700px; margin: 0 auto;">We believe in HoneyCept so much that we offer an unconditional 100% Satisfaction Guarantee. If you don't feel sharper, clearer, and more focused within 60 days, we'll refund your entire purchase—no questions asked.</p>
+                    <div style="margin-top: 30px;">
+                        <a href="https://mwebora.com/12298/319/3/?" class="btn-main">VIEW CURRENT OFFER →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. FAQ Section -->
+    <section class="section bg-gray">
+        <div class="container">
+            <h2 class="h2 text-center">Common Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>What is HoneyCept?</span><span>+</span></button><div class="faq-a">HoneyCept is a daily brain support supplement designed to help improve focus, memory, and mental clarity using natural botanical extracts.</div></div>
+                <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>Is HoneyCept safe?</span><span>+</span></button><div class="faq-a">Yes, it's made with natural ingredients in an FDA-registered and GMP-certified facility.</div></div>
+                <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>Is this a one-time purchase?</span><span>+</span></button><div class="faq-a">Absolutely. No subscriptions, no hidden fees. Just one single payment today.</div></div>
+                <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>When will I see results?</span><span>+</span></button><div class="faq-a">Most users report a difference in clarity within 7-14 days of consistent use.</div></div>
+                <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>How shipping works?</span><span>+</span></button><div class="faq-a">We ship via premium carriers like FedEx or UPS, and orders typically arrive within 5-7 business days in the USA.</div></div>
+                <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>What if I'm not satisfied?</span><span>+</span></button><div class="faq-a">We offer a 60-day, 100% money-back guarantee. If you aren't happy, simply return the bottles for a full refund.</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13. Final Offer -->
+    <section class="final-hero">
+        <div class="container">
+            <h2 class="h2" style="color: #fff; font-size: 2.8rem; margin-bottom: 10px;">Reclaim Your Mental Clarity Today</h2>
+            <p style="color: #cbd5e1; font-size: 1.15rem; margin-bottom: 45px;">Special discounted pricing available only through this link.</p>
+            
+            <div style="max-width: 320px; margin: 0 auto;">
+                <img src="images/imgi_27_3-frascos-7-768x768.png" alt="[Imagem da Oferta de 3 Frascos]" class="bundle-img-final">
+            </div>
+            
+            <div class="final-price-wrap">
+                <span style="font-size: 1.5rem; color: #94a3b8; text-decoration: line-through;">$1074</span>
+                <span style="font-family: 'Merriweather', serif; font-size: 4.5rem; font-weight: 900; color: #fff; line-height: 1;">$294</span>
+            </div>
+            
+            <p style="font-weight: 800; color: #fff; font-size: 1.3rem; margin-bottom: 35px;">Only US$ 49 per bottle + FREE SHIPPING!</p>
+            <p style="color: #FFCB00; font-weight: 700; margin-bottom: 25px;">ONE-TIME PURCHASE · NO SUBSCRIPTIONS · NO RECURRING BILLS</p>
+            
+            <a href="https://mwebora.com/12298/319/3/?" class="btn-white">VERIFY TODAY'S AVAILABILITY</a>
+            <p style="font-size: 0.75rem; color: #94a3b8; margin-top: 35px;">60-day money-back guarantee · Secure payment · One-time purchase</p>
+        </div>
+    </section>
+</main>
+
+<!-- 14. Footer -->
 <footer class="footer">
     <div class="container">
-        <div class="footer-links">
-            <a onclick="openModal('privacy')">Privacy Policy</a>
-            <a onclick="openModal('terms')">Terms of Service</a>
+        <nav class="footer-links">
+            <a href="javascript:void(0)" onclick="openModal('privacy')">Privacy Policy</a>
+            <a href="javascript:void(0)" onclick="openModal('terms')">Terms of Service</a>
             <a href="https://mwebora.com/12298/319/3/?" target="_blank">References</a>
-        </div>
+        </nav>
         
         <div class="footer-contact-info">
             <strong>Contact Us</strong><br>
             Distributed by HoneyCept, Aurora, CO 80011, USA<br>
             Product Email Support: <strong>contact@customercs.com</strong> | Phone: <strong>+1 (507) 448-8190</strong><br>
+            <p style="margin-top: 10px; font-size: 0.7rem; text-transform: uppercase;">Independent Authorized Distributor</p>
         </div>
 
-        <p style="line-height: 1.6; margin-top: 20px; opacity: 0.8;">FDA Compliance: These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure or prevent any disease. Individual results may vary.</p>
-        <p style="margin-top: 15px; opacity: 0.8;">&copy; 2026 HoneyCept Labs. All Rights Reserved.</p>
+        <p style="line-height: 1.6; margin-top: 20px; opacity: 0.9;">FDA Compliance: These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. Individual results may vary.</p>
+        <p style="margin-top: 15px; opacity: 0.9;">&copy; 2026 HoneyCept Labs. All Rights Reserved.</p>
     </div>
 </footer>
 
-<!-- Floating CTA -->
-<a href="https://mwebora.com/12298/319/3/?" class="floating-btn" id="floatBtn">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="28"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+<a href="https://mwebora.com/12298/319/3/?" class="floating-btn" id="floatBtn" aria-label="Go to Cart">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="28" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
 </a>
 
 <!-- Modals -->
 <div id="modal-privacy" class="modal" onclick="if(event.target===this)closeModal('privacy')">
-    <div class="modal-body"><span class="modal-close-btn" onclick="closeModal('privacy')">&times;</span><h3 class="h2">Privacy Policy</h3><p class="body-text" style="text-align: left; font-size: 0.95rem;">Your privacy is important to us. Your data is used exclusively to fulfill your order and improve our service. We use industry-standard encryption and never sell your information to third parties.</p></div>
+    <div class="modal-body"><span class="modal-close-btn" onclick="closeModal('privacy')" aria-label="Close">&times;</span><h3 class="h2">Privacy Policy</h3><p class="body-text" style="text-align: left; font-size: 0.95rem;">Your privacy is important to us. Your data is used exclusively to fulfill your order and improve our service. We use industry-standard encryption and never sell your information to third parties.</p></div>
 </div>
 <div id="modal-terms" class="modal" onclick="if(event.target===this)closeModal('terms')">
-    <div class="modal-body"><span class="modal-close-btn" onclick="closeModal('terms')">&times;</span><h3 class="h2">Terms of Service</h3><p class="body-text" style="text-align: left; font-size: 0.95rem;">By using this site, you agree to our terms. This site provides informational content, not medical advice. Returns: Return all bottles (even empty) within 60 days for a full refund.</p></div>
+    <div class="modal-body"><span class="modal-close-btn" onclick="closeModal('terms')" aria-label="Close">&times;</span><h3 class="h2">Terms of Service</h3><p class="body-text" style="text-align: left; font-size: 0.95rem;">By using this site, you agree to our terms. This site provides informational content, not medical advice. Returns: Return all bottles (even empty) within 60 days for a full refund.</p></div>
 </div>
 
 <script>
@@ -510,15 +494,19 @@
         btn.addEventListener('click', () => {
             const item = btn.parentElement;
             const isActive = item.classList.contains('active');
+            const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+            
             document.querySelectorAll('.faq-item').forEach(el => {
                 el.classList.remove('active');
                 el.querySelector('.faq-a').style.display = 'none';
                 el.querySelector('span:last-child').textContent = '+';
+                el.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
             });
             if (!isActive) {
                 item.classList.add('active');
                 item.querySelector('.faq-a').style.display = 'block';
                 item.querySelector('span:last-child').textContent = '-';
+                btn.setAttribute('aria-expanded', 'true');
             }
         });
     });
