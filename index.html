@@ -19,7 +19,7 @@
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
 
-    <!-- PRÉ-CARREGAMENTO DA IMAGEM HERO -->
+    <!-- PRELOAD HERO IMAGE -->
     <link rel="preload" as="image" href="images/imgi_44_HERO-3.png">
 
     <!-- OPEN GRAPH -->
@@ -30,7 +30,7 @@
     <meta property="og:url" content="https://clearfocusnow.dealselect.site/">
     <meta property="og:site_name" content="HoneyCept Official">
 
-    <!-- ESTRUTURA DE DADOS JSON-LD -->
+    <!-- JSON-LD STRUCTURED DATA -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -44,7 +44,7 @@
           "offers": {
             "@type": "AggregateOffer",
             "lowPrice": "49",
-            "highPrice": "79",
+            "highPrice": "294",
             "priceCurrency": "USD",
             "offerCount": "3"
           }
@@ -73,28 +73,29 @@
     }
     </script>
 
-    <!-- Performance e Fontes -->
+    <!-- Performance & Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@400;700;800;900&display=swap" rel="stylesheet">
 
-    <!-- Integração do Script de Afiliados -->
+    <!-- Affiliate Code Integration -->
     <script src="https://cod.raadsoficial.com/code/8300-57ba6682-9af6-4fd8-88ee-fb48a3b4e44b"></script>
 
     <style>
         :root {
-            --brand-primary: #FFCB00; /* Official Honey Gold */
-            --brand-dark:    #000B2E; /* Official Deep Navy */
+            --brand-primary: #FFCB00;
+            --brand-dark:    #000B2E;
             --brand-header:  #FCFCFC; 
             --cta-gold:      #FFCB00;
             --cta-hover:     #E5B600;
-            --accent-coral:  #FF7575;
             --text-main:     #000B2E;
             --text-body:     #1E293B;
             --text-light:    #64748B;
             --bg-white:      #ffffff;
             --bg-gray:       #f8fafc;
+            --bg-highlight:  #F3E5D8; /* Fundo marromzinho solicitado */
             --white:         #ffffff;
             --star-gold:     #FFB800;
             --shadow-soft:   0 10px 30px rgba(0,0,0,0.05);
+            --footer-bg:     #AD801C; /* Cor do rodapé solicitada */
         }
 
         *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -104,7 +105,7 @@
         button{cursor:pointer; font-family:inherit;}
 
         .container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-        .section { padding: 50px 0; }
+        .section { padding: 60px 0; }
         .text-center { text-align: center; }
         .flex-grid { display: flex; flex-direction: column; gap: 30px; align-items: center; }
 
@@ -118,8 +119,9 @@
         .bg-soft { background-color: rgba(255, 203, 0, 0.05); }
         .bg-gray { background-color: var(--bg-gray); }
         .bg-white { background-color: var(--white); }
+        .bg-marrom { background-color: var(--bg-highlight); }
 
-        .top-bar { background: var(--brand-dark); color: #fff; padding: 10px; text-align: center; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; }
+        .top-bar { background: var(--brand-dark); color: #fff; padding: 12px; text-align: center; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; }
         .site-header { background: var(--brand-header); padding: 15px 0; border-bottom: 1px solid rgba(0,0,0,0.05); text-align: center; }
         .logo { font-family: 'Merriweather', serif; font-size: 1.8rem; font-weight: 900; color: var(--brand-dark); letter-spacing: -1px; }
         .logo span { color: var(--brand-primary); }
@@ -135,33 +137,11 @@
         .btn-main:hover { background: var(--cta-hover); transform: translateY(-2px); }
         .btn-accent { display: inline-flex; align-items: center; justify-content: center; background: var(--brand-primary); color: #000; font-weight: 800; font-size: 0.9rem; padding: 14px 28px; border-radius: 10px; border-bottom: 3px solid rgba(0,0,0,0.1); }
 
-        /* Estilos para o Carrossel de Avaliações */
-        .reviews-scroller-container {
-            overflow: hidden;
-            position: relative;
-            width: 100%;
-            padding-bottom: 20px;
-        }
-
-        .reviews-scroller-wrapper {
-            display: flex;
-            gap: 20px;
-            width: fit-content; 
-        }
-
-        .scroller-clone {
-            visibility: hidden;
-        }
-        
-        .reviews-scroller-wrapper .review-card {
-            flex: 0 0 320px; 
-            background: #fff;
-            border: 1px solid #f1f5f9;
-            border-radius: 12px;
-            padding: 30px 20px;
-            text-align: center;
-            box-shadow: var(--shadow-soft);
-        }
+        /* Scroller */
+        .reviews-scroller-container { overflow: hidden; position: relative; width: 100%; padding-bottom: 20px; }
+        .reviews-scroller-wrapper { display: flex; gap: 20px; width: fit-content; }
+        .scroller-clone { visibility: hidden; }
+        .review-card { flex: 0 0 320px; background: #fff; border: 1px solid #f1f5f9; border-radius: 12px; padding: 30px 20px; text-align: center; box-shadow: var(--shadow-soft); }
 
         .review-verify { color: #16a34a; font-weight: 700; font-size: 0.7rem; text-transform: uppercase; margin-bottom: 10px; display: block; }
         .review-text { font-size: 1rem; color: var(--text-body); line-height: 1.6; margin-bottom: 12px; font-style: italic; }
@@ -177,11 +157,12 @@
 
         .trust-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 25px; }
         .trust-box { background: #fff; padding: 30px 15px; border-radius: 12px; border: 1px solid #f1f5f9; text-align: center; box-shadow: var(--shadow-soft); transition: 0.3s; }
-        .trust-box img { height: 70px; margin: 0 auto 15px; object-fit: contain; }
+        .trust-box:hover { transform: translateY(-5px); border-color: var(--brand-primary); }
+        .trust-box img { height: 75px; margin: 0 auto 15px; object-fit: contain; }
         .trust-box strong { font-size: 1rem; display: block; margin-bottom: 5px; color: var(--brand-dark); }
         .trust-box p { font-size: 0.8rem; color: var(--text-light); }
 
-        .step { display: flex; gap: 12px; margin-bottom: 25px; text-align: left;}
+        .step { display: flex; gap: 15px; margin-bottom: 20px; text-align: left;}
         .step-num { width: 36px; height: 36px; background: var(--brand-primary); color: var(--brand-dark); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.9rem; flex-shrink: 0; }
 
         .final-hero { background: linear-gradient(145deg, #000B2E, #001A4B); border-radius: 20px; padding: 50px 20px; text-align: center; color: #fff; margin-top: 30px; }
@@ -194,10 +175,9 @@
         .faq-q { width: 100%; padding: 18px 0; text-align: left; font-weight: 700; font-size: 0.95rem; color: var(--text-main); display: flex; justify-content: space-between; align-items: center; }
         .faq-a { display: none; padding-bottom: 18px; color: var(--text-body); line-height: 1.6; font-size: 0.9rem; }
 
-        .footer { background: var(--brand-dark); color: #94a3b8; padding: 50px 20px; text-align: center; font-size: 0.75rem; border-top: 1px solid rgba(255,255,255,0.05); }
+        .footer { background: var(--footer-bg); color: #fff; padding: 60px 20px; text-align: center; font-size: 0.75rem; }
         .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-bottom: 25px; font-weight: 600; color: #fff; }
-        .footer-contact-info { margin-bottom: 25px; color: #cbd5e1; font-size: 0.75rem; line-height: 1.7; }
-        .footer-contact-info strong { color: #fff; }
+        .footer-contact-info { margin-bottom: 25px; color: #fff; opacity: 0.95; font-size: 0.8rem; line-height: 1.8; }
 
         .floating-btn { position: fixed; bottom: 25px; right: 20px; background: var(--brand-primary); color: var(--brand-dark); width: 60px; height: 60px; border-radius: 50%; display: none; align-items: center; justify-content: center; box-shadow: 0 0 0 0 rgba(255, 203, 0, 0.7); z-index: 999; animation: pulse 2s infinite; }
 
@@ -206,8 +186,8 @@
         .modal-body { background: #fff; border-radius: 20px; max-width: 650px; width: 100%; max-height: 85vh; overflow-y: auto; padding: 40px; position: relative; }
         .modal-close-btn { position: absolute; top: 20px; right: 20px; font-size: 2.5rem; color: #ccc; cursor: pointer; line-height: 0.5; }
 
-        /* Ajuste da foto de ingredientes para Desktop */
-        .ing-main-img { max-width: 100%; width: 100%; margin: 0 auto 40px; border-radius: 20px; }
+        /* Imagem de ingredientes ajustada para Desktop */
+        .ing-main-img { max-width: 100%; width: 100%; margin: 0 auto 40px; border-radius: 12px; }
 
         @media(min-width: 768px) {
             .h1 { font-size: 3rem; text-align: left; }
@@ -224,15 +204,17 @@
             .mechanism-flex { display: flex; flex-direction: row; align-items: center; gap: 60px; }
             .flex-reverse { flex-direction: row-reverse; }
             .final-hero { padding: 80px 30px; }
-            /* Redução do tamanho da imagem de ingredientes no Desktop */
+            /* Redução do tamanho no Desktop conforme solicitado */
             .ing-main-img { max-width: 600px; }
         }
+
+        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(255, 203, 0, 0.7); } 70% { box-shadow: 0 0 0 12px rgba(255, 203, 0, 0); } 100% { box-shadow: 0 0 0 0 rgba(255, 203, 0, 0); } }
     </style>
 </head>
 <body>
 
-<!-- 1. Offer Bar -->
-<div class="top-bar">60-DAY MONEY BACK GUARANTEE | SPECIAL LAUNCH OFFER ACTIVE TODAY</div>
+<!-- 1. Offer Bar Atualizado -->
+<div class="top-bar">60-DAY MONEY BACK GUARANTEE | SAVE $780 TODAY</div>
 
 <!-- 2. Professional Header -->
 <header class="site-header">
@@ -247,8 +229,7 @@
         <div class="flex-grid">
             <div class="hero-img-container">
                 <a href="https://mwebora.com/12298/319/3/?">
-                    <!-- Foto da primeira sessão atualizada -->
-                    <img src="images/imgi_44_HERO-3.png" alt="" class="hero-img">
+                    <img src="images/imgi_44_HERO-3.png" alt="HoneyCept Advanced Formula" class="hero-img">
                 </a>
             </div>
             <div style="flex: 1;">
@@ -262,7 +243,6 @@
                     <div class="price-flex">
                         <span class="price-old">$197</span>
                         <span class="price-new">$49</span>
-                        <!-- Desconto atualizado para 73% -->
                         <span class="save-badge">SAVE 73%</span>
                     </div>
                     <span class="per-bottle">Only $49 per bottle + FREE US Shipping!</span>
@@ -280,11 +260,11 @@
 <section class="section bg-gray" style="padding: 25px 0;">
     <div class="container text-center">
         <p style="font-size: 0.65rem; font-weight: 800; text-transform: uppercase; color: var(--brand-dark); margin-bottom: 15px; letter-spacing: 1px;">Referenced in Modern Nootropic Publications</p>
-        <img src="images/scientific-logos.png" alt="" style="max-width: 800px; width: 100%; margin: 0 auto; opacity: 0.9;">
+        <img src="images/scientific-logos.png" alt="Featured in Journals" style="max-width: 800px; width: 100%; margin: 0 auto; opacity: 0.9;">
     </div>
 </section>
 
-<!-- 5. Testimonials Section (Carrossel Automático) -->
+<!-- 5. Testimonials Section -->
 <section class="section bg-soft">
     <div class="container text-center">
         <span class="badge">Success Stories</span>
@@ -304,17 +284,17 @@
             <div class="reviews-scroller-wrapper" id="reviewsWrapper">
                 <div class="review-card">
                     <span class="review-verify">✓ Verified Purchase</span>
-                    <p class="review-text">"As a retired teacher, my memory is my livelihood. I started feeling 'foggy' last year, but within 10 days of HoneyCept, that heavy static just lifted. I feel like myself again."</p>
+                    <p class="review-text">"As a retired teacher, my memory is my livelihood. I started feeling 'foggy' last year, but within 10 days of HoneyCept, that heavy static just lifted."</p>
                     <span class="review-author">Linda S. — Sarasota, FL</span>
                 </div>
                 <div class="review-card">
                     <span class="review-verify">✓ Verified Purchase</span>
-                    <p class="review-text">"I run a small business and can't afford to be slow. I used to rely on 4 cups of coffee just to stay focused. Now, I have sustained clarity all day without the jitters."</p>
+                    <p class="review-text">"I run a small business and can't afford to be slow. I used to rely on 4 cups of coffee. Now, I have sustained clarity all day without the jitters."</p>
                     <span class="review-author">David W. — Phoenix, AZ</span>
                 </div>
                 <div class="review-card">
                     <span class="review-verify">✓ Verified Purchase</span>
-                    <p class="review-text">"Being 68 doesn't mean I have to be forgetful. HoneyCept is my morning secret. No more walking into rooms and forgetting why I'm there. It's a game-changer."</p>
+                    <p class="review-text">"Being 68 doesn't mean I have to be forgetful. HoneyCept is my morning secret. No more walking into rooms and forgetting why I'm there."</p>
                     <span class="review-author">Robert K. — Columbus, OH</span>
                 </div>
                 <div class="review-card">
@@ -324,7 +304,7 @@
                 </div>
                 <div class="review-card">
                     <span class="review-verify">✓ Verified Purchase</span>
-                    <p class="review-text">"The brain fog was real. HoneyCept helped clear the 'static' in my head. I'm on my 4th bottle now."</p>
+                    <p class="review-text">"The brain fog was real. HoneyCept helped clear the 'static' in my head. I'm on my 4th bottle now and feeling great."</p>
                     <span class="review-author">James P. — Denver, CO</span>
                 </div>
                 <div class="review-card">
@@ -342,15 +322,14 @@
     <div class="container">
         <div class="flex-grid">
             <div class="mechanism-box">
-                <!-- Foto atualizada para doc-1.webp -->
-                <img src="images/doc-1.webp" alt="" class="mechanism-img">
+                <img src="images/doc-1.webp" alt="Neuro-Nutrition Expert" class="mechanism-img">
             </div>
             <div style="flex: 1;">
                 <span class="attention">Must Read:</span>
                 <h2 class="h2">Is Your Mind "Checking Out" Before You Are?</h2>
                 <div class="body-text">
-                    <p>It starts small. Forgetting where you left the keys. Struggling to remember a name that’s on the tip of your tongue. That "afternoon slump" where your brain just feels like static.</p>
-                    <p style="margin-top: 15px;">Most common solutions rely on <strong>cheap synthetic stimulants</strong> that hijack your sensors and cause a "brain crash" at 3 PM. HoneyCept is different. It provides deep neuro-nutrition to support long-term cognitive health.</p>
+                    <p>It starts small. Forgetting where you left the keys. Struggling to remember a name. That "afternoon slump" where your brain just feels like static.</p>
+                    <p style="margin-top: 15px;">Most common solutions rely on <strong>cheap synthetic stimulants</strong> that cause a crash. HoneyCept provides deep neuro-nutrition to support long-term cognitive health.</p>
                 </div>
                 <div style="margin-top: 30px;">
                     <a href="https://mwebora.com/12298/319/3/?" class="btn-accent">CHECK HOW IT WORKS →</a>
@@ -379,13 +358,13 @@
     <div class="container">
         <div class="mechanism-flex">
             <div style="flex: 1; text-align: center;" class="mechanism-box">
-                <img src="images/honeycept.png" alt="" class="mechanism-img">
+                <img src="images/honeycept.png" alt="The HoneyCept Ritual" class="mechanism-img">
             </div>
             <div style="flex: 1;">
                 <span class="attention">Daily Protocol:</span>
                 <h2 class="h2">The 3-Second Ritual For Mental Clarity</h2>
                 <div class="body-text">
-                   <p>Simply take the recommended dosage with water once daily, preferably in the morning. This simple consistency allows the natural botanical extracts to support your cognitive pathways throughout the entire day.</p>
+                   <p>Simply take the recommended dosage with water once daily, preferably in the morning. This consistency allows the botanical extracts to support your cognitive pathways throughout the day.</p>
                    <p style="margin-top: 15px;">Within the first week, users report a "lifting of the fog," leading to better focus and resilience during mental stress.</p>
                 </div>
             </div>
@@ -393,24 +372,26 @@
     </div>
 </section>
 
-<!-- Session 9: Supporting vs Forcing -->
-<section class="section bg-soft text-center">
+<!-- Session 9: Supporting vs Forcing (MARROMZINHO) -->
+<section class="section text-center bg-marrom">
     <div class="container">
         <h2 class="h2">Wait, Don't "Force" Your Focus—Nourish It.</h2>
         <div class="body-text" style="max-width: 850px; margin: 0 auto; color: var(--text-main); font-weight: 500;">
-            <p>HoneyCept is designed to feed your brain the vital nutrients it needs to perform at its peak. By providing the brain with standardized extracts found in nature, we support the body’s own ritual of neural maintenance and growth—WITHOUT the crash of synthetic stimulants.</p>
+            <p>HoneyCept is designed to feed your brain the vital nutrients it needs to perform at its peak. By providing standardized extracts found in nature, we support the body’s own ritual of neural maintenance and growth—WITHOUT the crash.</p>
         </div>
     </div>
 </section>
 
-<!-- Session 10: Ingredients Section (Lista Numerada e Foto Ajustada) -->
+<!-- Session 10: Ingredients Section -->
 <section class="section bg-white">
     <div class="container text-center">
         <h2 class="h2">The Key Ingredients Behind the Formula</h2>
         
-        <img src="images/honey-ingred.png" alt="" class="ing-main-img">
+        <!-- Foto centralizada e ajustada para desktop -->
+        <img src="images/honey-ingred.png" alt="HoneyCept Main Ingredients" class="ing-main-img">
 
-        <div style="max-width: 650px; margin: 30px auto; text-align: left;">
+        <!-- Lista numerada uniforme solicitada -->
+        <div style="max-width: 650px; margin: 0 auto; text-align: left;">
             <div class="step"><div class="step-num">1</div><div class="body-text"><strong>Bacopa monnieri:</strong> Ancient botanical known for supporting rapid information recall and focus.</div></div>
             <div class="step"><div class="step-num">2</div><div class="body-text"><strong>Vitamin B12:</strong> Essential for nerve health and maintaining consistent daily energy levels.</div></div>
             <div class="step"><div class="step-num">3</div><div class="body-text"><strong>Huperzine-A:</strong> Supports the "learning molecule" (acetylcholine) in the brain.</div></div>
@@ -418,7 +399,8 @@
             <div class="step"><div class="step-num">5</div><div class="body-text"><strong>Neuro-Protection:</strong> Botanical extracts that help protect neurons from oxidative stress.</div></div>
             <div class="step"><div class="step-num">6</div><div class="body-text"><strong>Sustained Energy:</strong> Jitter-free mental energy for everyday high-performance living.</div></div>
         </div>
-        <div style="margin-top: 30px;">
+        
+        <div style="margin-top: 40px;">
             <a href="https://mwebora.com/12298/319/3/?" class="btn-accent">SEE FULL PRODUCT DETAILS</a>
         </div>
     </div>
@@ -428,10 +410,9 @@
 <section class="section" style="background-color: #FFF9E5; border-top: 2px solid #FFCB00; border-bottom: 2px solid #FFCB00;">
     <div class="container text-center">
         <div class="flex-grid" style="justify-content: center;">
-            <img src="images/guarantee-badge.png" alt="" style="width: 140px;">
+            <img src="images/guarantee-badge.png" alt="Satisfaction Guaranteed" style="width: 140px;">
             <div>
                 <h3 class="h2">60-Day Money Back Guarantee</h3>
-                <!-- Removidos asteriscos de formatação -->
                 <p class="body-text" style="font-size: 1.1rem; max-width: 700px; margin: 0 auto;">We believe in HoneyCept so much that we offer an unconditional 100% Satisfaction Guarantee. If you don't feel sharper, clearer, and more focused within 60 days, we'll refund your entire purchase—no questions asked.</p>
                 <div style="margin-top: 30px;">
                     <a href="https://mwebora.com/12298/319/3/?" class="btn-main">VIEW CURRENT OFFER →</a>
@@ -446,7 +427,7 @@
     <div class="container">
         <h2 class="h2">Official Product Formulation</h2>
         <div style="max-width: 800px; margin: 0 auto;">
-            <img src="https://lp.institutoexperience.com.br/wp-content/uploads/2026/01/HoneyCept-USA.webp" alt="" style="width: 100%; border-radius: 12px; box-shadow: var(--shadow-soft);">
+            <img src="https://lp.institutoexperience.com.br/wp-content/uploads/2026/01/HoneyCept-USA.webp" alt="Supplement Facts" style="width: 100%; border-radius: 12px; box-shadow: var(--shadow-soft);">
         </div>
     </div>
 </section>
@@ -473,12 +454,11 @@
         <p style="color: #cbd5e1; font-size: 1.15rem; margin-bottom: 45px;">Special discounted pricing available only through this link.</p>
         
         <div style="max-width: 320px; margin: 0 auto;">
-            <!-- Foto da oferta final atualizada -->
-            <img src="images/imgi_27_3-frascos-7-768x768.png" alt="" class="bundle-img-final">
+            <img src="images/imgi_27_3-frascos-7-768x768.png" alt="Final Offer Bundle" class="bundle-img-final">
         </div>
         
         <div class="final-price-wrap">
-            <span style="font-size: 1.5rem; color: #94a3b8; text-decoration: line-through;">$594</span>
+            <span style="font-size: 1.5rem; color: #94a3b8; text-decoration: line-through;">$1074</span>
             <span style="font-family: 'Merriweather', serif; font-size: 4.5rem; font-weight: 900; color: #fff; line-height: 1;">$294</span>
         </div>
         
@@ -491,7 +471,7 @@
     </div>
 </section>
 
-<!-- Session 14: Footer -->
+<!-- Session 14: Footer Atualizado -->
 <footer class="footer">
     <div class="container">
         <div class="footer-links">
@@ -506,19 +486,19 @@
             Product Email Support: <strong>contact@customercs.com</strong> | Phone: <strong>+1 (507) 448-8190</strong><br>
         </div>
 
-        <p style="line-height: 1.6; margin-top: 20px;">FDA Compliance: These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure or prevent any disease. Individual results may vary.</p>
-        <p style="margin-top: 15px;">&copy; 2026 HoneyCept Labs. All Rights Reserved.</p>
+        <p style="line-height: 1.6; margin-top: 20px; opacity: 0.8;">FDA Compliance: These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure or prevent any disease. Individual results may vary.</p>
+        <p style="margin-top: 15px; opacity: 0.8;">&copy; 2026 HoneyCept Labs. All Rights Reserved.</p>
     </div>
 </footer>
 
-<!-- Botão de Carrinho Flutuante -->
-<a href="https://mwebora.com/12298/319/3/?" class="floating-btn" id="floatBtn" style="display: none;">
+<!-- Floating CTA -->
+<a href="https://mwebora.com/12298/319/3/?" class="floating-btn" id="floatBtn">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="28"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
 </a>
 
-<!-- Conteúdo dos Modais -->
+<!-- Modals -->
 <div id="modal-privacy" class="modal" onclick="if(event.target===this)closeModal('privacy')">
-    <div class="modal-body"><span class="modal-close-btn" onclick="closeModal('privacy')">&times;</span><h3 class="h2">Privacy Policy</h3><p class="body-text" style="text-align: left; font-size: 0.95rem;">Your privacy is important to us. We value your privacy. Your data is used exclusively to fulfill your order and improve our service. We use industry-standard encryption and never sell your information to third parties.</p></div>
+    <div class="modal-body"><span class="modal-close-btn" onclick="closeModal('privacy')">&times;</span><h3 class="h2">Privacy Policy</h3><p class="body-text" style="text-align: left; font-size: 0.95rem;">Your privacy is important to us. Your data is used exclusively to fulfill your order and improve our service. We use industry-standard encryption and never sell your information to third parties.</p></div>
 </div>
 <div id="modal-terms" class="modal" onclick="if(event.target===this)closeModal('terms')">
     <div class="modal-body"><span class="modal-close-btn" onclick="closeModal('terms')">&times;</span><h3 class="h2">Terms of Service</h3><p class="body-text" style="text-align: left; font-size: 0.95rem;">By using this site, you agree to our terms. This site provides informational content, not medical advice. Returns: Return all bottles (even empty) within 60 days for a full refund.</p></div>
@@ -543,48 +523,39 @@
         });
     });
 
-    // Lógica do Botão Flutuante
+    // Floating Button
     const floatBtn = document.getElementById('floatBtn');
     window.addEventListener('scroll', () => { floatBtn.style.display = window.scrollY > 1000 ? 'flex' : 'none'; }, {passive: true});
 
-    // Controlo de Modais
+    // Modals
     function openModal(id) { document.getElementById('modal-' + id).classList.add('open'); document.body.style.overflow = 'hidden'; }
     function closeModal(id) { document.getElementById('modal-' + id).classList.remove('open'); document.body.style.overflow = 'auto'; }
 
-    // Lógica do Carrossel de Avaliações
+    // Carousel
     document.addEventListener("DOMContentLoaded", () => {
         const wrapper = document.getElementById('reviewsWrapper');
         const cards = Array.from(wrapper.children);
         if(!wrapper || cards.length === 0) return;
-        
         const cardWidth = cards[0].offsetWidth + 20; 
         const totalWidth = cardWidth * cards.length;
-
         cards.forEach(card => {
             const clone = card.cloneNode(true);
             clone.classList.add('scroller-clone');
             wrapper.appendChild(clone);
         });
-
         const clones = wrapper.querySelectorAll('.scroller-clone');
         clones.forEach(clone => clone.style.visibility = 'visible');
-
         let scrollPos = 0;
         let isAnimating = true;
-
         function animateScroll() {
             if (!isAnimating) return;
             scrollPos += 0.5; 
-            if (scrollPos >= totalWidth) {
-                scrollPos = 0;
-            }
+            if (scrollPos >= totalWidth) { scrollPos = 0; }
             wrapper.style.transform = `translateX(-${scrollPos}px)`;
             requestAnimationFrame(animateScroll);
         }
-
         wrapper.addEventListener('mouseenter', () => { isAnimating = false; });
         wrapper.addEventListener('mouseleave', () => { isAnimating = true; animateScroll(); });
-
         animateScroll();
     });
 </script>
